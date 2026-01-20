@@ -1,0 +1,44 @@
+# ===== Node / npm =====
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===== Environment variables =====
+.env
+.env.*
+!.env.example
+
+# ===== Secrets =====
+secrets/
+**/secrets/
+*.key
+*.pem
+*.crt
+*.p12
+
+# ===== Logs =====
+logs/
+*.log
+
+# ===== OS / Editor =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ===== Build / Temp =====
+dist/
+build/
+tmp/
+temp/
+
+# ===== Backup / Archive =====
+*.zip
+*.tar
+*.tar.gz
+
+# ===== Shell =====
+*.swp
+*.swo
+run.sh
