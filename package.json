@@ -1,5 +1,5 @@
 {
-  "name": "backup-azahar",
+  "name": "backup-to-drive",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
