@@ -23,6 +23,7 @@ If a file with the same name already exists, it updates the file instead of crea
 ---
 
 ## Project Structure
+```text
 .
 ├── zip_and_upload_oauth.mjs
 ├── package.json
@@ -30,12 +31,14 @@ If a file with the same name already exists, it updates the file instead of crea
 ├── secrets/ # OAuth credentials (gitignored)
 ├── .env # environment variables (gitignored)
 └── node_modules/ # dependencies (gitignored)
+```
 
 ---
 
 ## Installation
-
+```bash
 npm install
+```
 
 ---
 
@@ -57,5 +60,7 @@ ZIP_NAME=backup.zip
 
 ## Usage
 
+```bash
 node zip_and_upload_oauth.mjs <DIR_TO_ZIP>
+```
 
