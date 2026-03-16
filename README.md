@@ -5,6 +5,14 @@ If a file with the same name already exists, it updates the file instead of crea
 
 ---
 
+## Features
+
+- Zip a local directory
+- Upload to Google Drive via OAuth2
+- Update existing file if the same name already exists
+
+---
+
 ## Tech Stack
 
 - Node.js (ESM)
