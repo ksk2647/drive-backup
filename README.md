@@ -1,48 +1,53 @@
 # backup-to-drive
 
-로컬 디렉토리를 압축(zip) 한 뒤
-OAuth 인증을 통해 Google Drive에 업로드하는
-Node.js 기반 백업 스크립트입니다.
+Node.js CLI tool that zips a local directory and uploads it to Google Drive using OAuth2.
+If a file with the same name already exists, it updates the file instead of creating a new one.
 
+---
 
-## 🛠️ 기술스택
+## Tech Stack
 
-* Node.js (ESM)
-* OAuth 2.0
-* zip / file system API
+- Node.js (ESM)
+- Google Drive API
+- OAuth2
+- Archiver
 
+---
 
-## 📁 프로젝트 구조
-
+## Project Structure
 .
-├── zip_and_upload_oauth.mjs   # 메인 실행 스크립트
+├── zip_and_upload_oauth.mjs
 ├── package.json
 ├── package-lock.json
-├── secrets/                  # OAuth 인증 정보 (gitignore)
-├── .env                      # 환경변수 (gitignore)
-└── node_modules/             # 의존성 (gitignore)
+├── secrets/ # OAuth credentials (gitignored)
+├── .env # environment variables (gitignored)
+└── node_modules/ # dependencies (gitignored)
 
+---
 
-## ⚙️  설치
+## Installation
 
 npm install
 
+---
 
+## Environment Variables
 
-## 🔐 환경 변수 설정
+DRIVE_FOLDER_ID=YOUR_DRIVE_FOLDER_ID
+ZIP_NAME=backup.zip
 
-DRIVE_FOLDER_ID=DRIVE_FOLDER_ID
-ZIP_NAME=ZIPFILE_NAME.zip
+---
 
+## Google OAuth Setup
 
+1. Enable **Google Drive API** in Google Cloud Console  
+2. Download OAuth credentials  
+3. Save the file as:
+./secrets/credentials.json
 
-## 🔐 Google 인증파일 다운로드
+---
 
-Google drive api 설정 및 인증파일을 다운로드 하여
-./secrets/credential.json 에 저장합니다.
+## Usage
 
+node zip_and_upload_oauth.mjs <DIR_TO_ZIP>
 
-
-## ▶️ 실행 방법
-
-node zip_and_upload_oauth.mjs $ZIP_AND_UPLOAD_FILE_PATH
